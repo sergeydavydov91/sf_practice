@@ -1,0 +1,6 @@
+#ENV['VAGRANT_SERVER_URL'] = 'http://vagrant.elab.pro'
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-18.04"
+  config.vm.provision "shell", path: "provision.sh"
+  config.vm.synced_folder "C:\\Users\\sergey.davydov\\Documents\\_Vagrant\\transfer\\", "/home/vagrant/"
+end
